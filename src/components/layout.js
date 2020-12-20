@@ -8,28 +8,25 @@ import Tree from './Tree';
 import Snow from './Snow';
 import SEO from './SEO';
 
+let decoratedT = false;
+let snowStartedT = false;
+
 export default function Layout({ children }) {
 
-  const [decorated, setDecorated] = useState(v => {
-    return localStorage.getItem('decorated') === 'true'
-  });
-  const [snowStarted, setSnowStarted] = useState(v => {
-    return localStorage.getItem('snowStarted') === 'true'
+  const [decorated, setDecorated] = useState(decoratedT);
+  const [snowStarted, setSnowStarted] = useState(snowStartedT);
+
+  const onDecorateTrees = () => setDecorated(v => {
+    decoratedT = !v;
+    return !v;
   });
 
-  const onDecorateTrees = () => {
-    setDecorated(v => {
-      localStorage.setItem('decorated', !v)
-      return !v;
-    })
-  };
+  const onStartSnow = () => setSnowStarted(v => {
+    snowStartedT = !v;
+    return !v;
+  });
 
-  const onStartSnow = () => {
-    setSnowStarted(v => {
-      localStorage.setItem('snowStarted', !v)
-      return !v;
-    })
-  };
+  console.log(decorated, snowStarted)
 
   return (
     <div style={{ position: 'relative', height: '100%' }}>
