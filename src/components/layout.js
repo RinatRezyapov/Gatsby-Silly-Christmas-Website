@@ -10,12 +10,26 @@ import SEO from './SEO';
 
 export default function Layout({ children }) {
 
-  const [decorated, setDecorated] = useState(false);
-  const [snowStarted, setSnowStarted] = useState(false);
+  const [decorated, setDecorated] = useState(v => {
+    return localStorage.getItem('decorated') === 'true'
+  });
+  const [snowStarted, setSnowStarted] = useState(v => {
+    return localStorage.getItem('snowStarted') === 'true'
+  });
 
-  const onDecorateTrees = () => setDecorated(v => !v);
+  const onDecorateTrees = () => {
+    setDecorated(v => {
+      localStorage.setItem('decorated', !v)
+      return !v;
+    })
+  };
 
-  const onStartSnow = () => setSnowStarted(v => !v);
+  const onStartSnow = () => {
+    setSnowStarted(v => {
+      localStorage.setItem('snowStarted', !v)
+      return !v;
+    })
+  };
 
   return (
     <div style={{ position: 'relative', height: '100%' }}>
@@ -93,7 +107,8 @@ const StyledButtonLink = styled(Link)`
   color: white; 
   text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
   text-decoration: none; 
-  padding: 1rem; 
+  padding: 1rem;
+  margin-left: 1rem;
   display: flex; 
   justify-content: center;
   align-items: center; 

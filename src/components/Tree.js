@@ -1,4 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
+import gatsbyLogo from '../../static/Gatsby-Monogram.svg';
+
+const StyledGatsbyDecoration = styled.img`
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  left: 47%;
+  top: 20%;
+`;
 
 const Tree = ({ decorated, style, cellHeight = 2, cellWidth = 2 }) => {
   return (
@@ -8,6 +18,7 @@ const Tree = ({ decorated, style, cellHeight = 2, cellWidth = 2 }) => {
         marginRight: 'auto',
         fontSize: '0px'
       }}>
+        {decorated && <StyledGatsbyDecoration src={gatsbyLogo} />}
         {decorated ? (<tbody><tr>
           <td width={cellWidth} height={cellHeight} colSpan="30" bgcolor="transparent">&nbsp;</td>
           <td width={cellWidth} height={cellHeight} colSpan="3" bgcolor="#000000">&nbsp;</td>
@@ -153,7 +164,7 @@ const Tree = ({ decorated, style, cellHeight = 2, cellWidth = 2 }) => {
           <tr>
             <td width={cellWidth} height={cellHeight} colSpan="21" bgcolor="transparent">&nbsp;</td>
             <td width={cellWidth} height={cellHeight} colSpan="4" bgcolor="#000000">&nbsp;</td>
-            <td width={cellWidth} height={cellHeight} colSpan="1" bgcolor="#808000">&nbsp;</td>
+            <td width={cellWidth} height={cellHeight} colSpan="1" bgcolor="#008000">&nbsp;</td>
             <td width={cellWidth} height={cellHeight} colSpan="4" bgcolor="#008000">&nbsp;</td>
             <td width={cellWidth} height={cellHeight} colSpan="3" bgcolor="#000000">&nbsp;</td>
             <td width={cellWidth} height={cellHeight} colSpan="5" bgcolor="#008000">&nbsp;</td>
@@ -435,7 +446,7 @@ const Tree = ({ decorated, style, cellHeight = 2, cellWidth = 2 }) => {
           <tr>
             <td width={cellWidth} height={cellHeight} colSpan="15" bgcolor="transparent">&nbsp;</td>
             <td width={cellWidth} height={cellHeight} colSpan="1" bgcolor="#000000">&nbsp;</td>
-            <td width={cellWidth} height={cellHeight} colSpan="1" bgcolor="#808000">&nbsp;</td>
+            <td width={cellWidth} height={cellHeight} colSpan="1" bgcolor="#008000">&nbsp;</td>
             <td width={cellWidth} height={cellHeight} colSpan="5" bgcolor="#008000">&nbsp;</td>
             <td width={cellWidth} height={cellHeight} colSpan="1" bgcolor="#000000">&nbsp;</td>
             <td width={cellWidth} height={cellHeight} colSpan="3" bgcolor="#FF0000">&nbsp;</td>

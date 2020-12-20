@@ -1,8 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import song from '../static/peritune-world-op.mp3'
-import LoaderSVG from '../static/Gatsby-Monogram.svg'
-
+import song from '../static/christmas-village.mp3'
 export default function HTML(props) {
 
   return (
@@ -21,29 +19,6 @@ export default function HTML(props) {
           <source src={song} type="audio/mpeg" />
         </audio>
         {props.preBodyComponents}
-        <div
-          key={`loader`}
-          id="___loader"
-          style={{
-            alignItems: "center",
-            backgroundColor: "#F2F2F2",
-            display: "flex",
-            justifyContent: "center",
-            position: "absolute",
-            left: 0,
-            top: 0,
-            right: 0,
-            bottom: 0,
-            zIndex: 100,
-          }}
-        >
-          <img
-            src={LoaderSVG}
-            alt="loading spinner"
-            width="150"
-            height="150"
-          />
-        </div>
         <div
           key={`body`}
           id="___gatsby"
