@@ -23,6 +23,7 @@ const Sign = ({ children, cellHeight = 2, cellWidth = 8, style, buttonStyle, onB
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'flex-start',
+      zIndex: 2,
       ...style
     }}>
       <StyledSignButton style={buttonStyle} onClick={onButtonClick} aria-label={children}>
