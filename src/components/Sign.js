@@ -5,7 +5,7 @@ const StyledSignButton = styled.button`
   z-index: 1;
   height: 100px;
   color: white;
-  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  text-shadow: -1px -1px 1px #fff, 2px 2px 1px #462900;
   background: none;
   border: none;
   font-weight: 400;

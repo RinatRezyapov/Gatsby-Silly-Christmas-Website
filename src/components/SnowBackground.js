@@ -25,7 +25,7 @@ const ObjectsWrapper = styled.div`
 
 let decoratedInit = false;
 
-const SnowBackground = ({ snowStarted, onStartSnow }) => {
+const SnowBackground = ({ songStarted, onSongToggle }) => {
 
   const [decorated, setDecorated] = useState(decoratedInit);
 
@@ -494,9 +494,9 @@ const SnowBackground = ({ snowStarted, onStartSnow }) => {
           cellWidth={2}
           style={{ transform: 'scaleX(-1) rotate(-10deg)', top: '40px', left: '70%' }}
           buttonStyle={{ height: 80, transform: 'scaleX(-1) rotate(2deg)' }}
-          onButtonClick={onStartSnow}
+          onButtonClick={onSongToggle}
         >
-          {snowStarted ? 'Stop' : 'Start'} snow
+          {songStarted ? 'Pause' : 'Start'} song
         </Sign>
       </ObjectsWrapper>
     </Wrapper>

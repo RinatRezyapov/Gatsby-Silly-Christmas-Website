@@ -7,24 +7,29 @@ import Button from './Button';
 import Snow from './Snow';
 import SEO from './SEO';
 
-let snowStartedInit = false;
 
 export default function Layout({ children }) {  
   
-  const [snowStarted, setSnowStarted] = useState(snowStartedInit);
+  const [songStarted, setSongStarted] = useState(false);
 
-  const onStartSnow = () => setSnowStarted(v => {
-    snowStartedInit = !v;
+  const onSongToggle = () => setSongStarted(v => {
+    const audio = document.getElementById("bgAudio");
+    audio.volume = 0.1;
+    if (!v) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
     return !v;
   });
 
   return (
     <Wrapper>
       <SEO />
-      {snowStarted && <Snow />}
+      <Snow />
       <BackgroundWrapper>
         <Background />
-        <SnowBackground snowStarted={snowStarted} onStartSnow={onStartSnow} />
+        <SnowBackground songStarted={songStarted} onSongToggle={onSongToggle} />
       </BackgroundWrapper>
       <SubWrapper>
         <Navigation>
