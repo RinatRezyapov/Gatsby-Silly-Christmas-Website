@@ -15,7 +15,7 @@ export default function HTML(props) {
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
-        <audio autoPlay id="bgAudio">
+        <audio id="bgAudio">
           <source src={song} type="audio/mpeg" />
         </audio>
         {props.preBodyComponents}
