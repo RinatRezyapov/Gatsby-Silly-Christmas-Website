@@ -496,7 +496,7 @@ const SnowBackground = ({ songStarted, onSongToggle }) => {
           buttonStyle={{ height: 80, transform: 'scaleX(-1) rotate(2deg)' }}
           onButtonClick={onSongToggle}
         >
-          {songStarted ? 'Pause' : 'Start'} song
+          {songStarted ? 'Pause' : 'Play a'} song
         </Sign>
       </ObjectsWrapper>
     </Wrapper>
