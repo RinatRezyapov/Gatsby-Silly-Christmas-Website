@@ -1,24 +1,38 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ChildWrapper = styled.div`
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+`;
+
+const TableWrapper = styled.div`
+  position: absolute;
+`;
+
+const StyledTable = styled.table`
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0px;
+`;
 
 const Button = ({ children, cellHeight = 2, cellWidth = 8 }) => {
-
   return (
-    <div style={{
-      width: '200px',
-      height: '100%',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center'
-    }}>
-      <div style={{ zIndex: 1, height: '100%', width: '100%' }}>
+    <Wrapper>
+      <ChildWrapper>
         {children}
-      </div>
-      <div style={{ position: 'absolute' }}>
-        <table border="0" cellPadding="0" cellSpacing="0" style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          fontSize: '0px'
-        }}>
+      </ChildWrapper>
+      <TableWrapper>
+        <StyledTable border="0" cellPadding="0" cellSpacing="0">
           <tbody><tr>
             <td width={cellWidth} height={cellHeight} colSpan="31" bgcolor="transparent">&nbsp;</td>
           </tr>
@@ -1741,9 +1755,9 @@ const Button = ({ children, cellHeight = 2, cellWidth = 8 }) => {
             </tr>
 
           </tbody>
-        </table>
-      </div>
-    </div>
+        </StyledTable>
+      </TableWrapper>
+    </Wrapper>
   )
 }
 

@@ -14,28 +14,34 @@ const StyledSignButton = styled.button`
   cursor: pointer;
 `;
 
+const Wrapper = styled.div`
+  position: absolute;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 2,
+`;
+
+const StyledTable = styled.table`
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0px;
+`;
+
+const TableWrapper = styled.div`
+  position: absolute;
+`;
+
 const Sign = ({ children, cellHeight = 2, cellWidth = 8, style, buttonStyle, onButtonClick}) => {
 
   return (
-    <div style={{
-      position: 'absolute',
-      width: '250px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'flex-start',
-      zIndex: 2,
-      ...style
-    }}>
+    <Wrapper style={{ ...style }}>
       <StyledSignButton style={buttonStyle} onClick={onButtonClick} aria-label={children}>
         {children}
       </StyledSignButton>
-      <div style={{ position: 'absolute' }}>
-        <table border="0" cellPadding="0" cellSpacing="0" style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          fontSize: '0px'
-        }}>
-
+      <TableWrapper>
+        <StyledTable border="0" cellPadding="0" cellSpacing="0">
           <tbody><tr>
             <td width={cellWidth} height={cellHeight} colSpan="25" bgcolor="transparent">&nbsp;</td>
             <td width={cellWidth} height={cellHeight} colSpan="1" bgcolor="#B96A24">&nbsp;</td>
@@ -1469,11 +1475,10 @@ const Sign = ({ children, cellHeight = 2, cellWidth = 8, style, buttonStyle, onB
               <td width={cellWidth} height={cellHeight} colSpan="1" bgcolor="#F8F7F5">&nbsp;</td>
               <td width={cellWidth} height={cellHeight} colSpan="33" bgcolor="transparent">&nbsp;</td>
             </tr>
-
           </tbody>
-        </table>
-      </div>
-    </div>
+        </StyledTable>
+      </TableWrapper>
+    </Wrapper>
   )
 }
 

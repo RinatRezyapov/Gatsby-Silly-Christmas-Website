@@ -23,9 +23,8 @@ export default function GatsbySillyWebsite() {
 }
 
 const GatsbyColorLink = styled.a`
-  color: #663399;
+  color: #FFEB3B;
   text-decoration: none;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 `;
 
 const Column = styled.div`

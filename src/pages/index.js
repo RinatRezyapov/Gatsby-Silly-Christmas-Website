@@ -26,8 +26,7 @@ export default function Home() {
 }
 
 const GatsbyColorText = styled.span`
-  color: #663399;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #FFEB3B;
 `;
 
 const Column = styled.div`
