@@ -19,8 +19,8 @@ export default function Home() {
     <Column />
     <Column>
       <h1>Right now the DOM contains <GatsbyColorText>{' '}{tdsCount}</GatsbyColorText> td elements</h1>
-      <p>There could be even more. It all depends on how detalaised you want your images when converting them to the HTML Table.</p>
-      <p>Of course performance will suffer and optimization tools, such as Lighthouse, won't give your website green light.</p>
+      <p>There could be even more. It all depends on how detailed you want your images when converting them to the HTML Table.</p>
+      <p>Of course, performance will suffer and optimization tools, such as Lighthouse, won't give your website a green light.</p>
     </Column>
   </Layout>
 }
