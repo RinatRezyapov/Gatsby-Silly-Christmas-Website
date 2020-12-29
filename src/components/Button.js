@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width: 200px;
   height: 100%;
   display: flex;
   justify-content: center;
