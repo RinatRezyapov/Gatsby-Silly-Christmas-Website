@@ -16,8 +16,6 @@ export default function AboutMe() {
       </p>
     </Column>
     <Column />
-    <Column />
-    <Column />
   </Layout>
 }
 
@@ -29,4 +27,5 @@ const GatsbyColorLink = styled.a`
 const Column = styled.div`
   flex: 1 0 0%;
   padding: 0 3rem;
+  max-width: 600px;
 `;

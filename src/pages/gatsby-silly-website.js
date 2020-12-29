@@ -9,8 +9,6 @@ export default function GatsbySillyWebsite() {
         Need a break? Learn something new by building a site or app with Gatsby. Have fun, keep it silly, and enjoy the process!
         </h1>
     </Column>
-    <Column />
-    <Column />
     <Column>
       <p>
         A site that makes goofy sound effects as you scroll? A virtual lava lamp? Yes, please! The sillier the site, the better. Get creative, build new skills, and get exclusive swag for participating in the first-ever Silly Site Challenge. The top 20 silliest sites will be highlighted on the Gatsby Blog. Sign up to get all the details including how to get started building that silly site!
@@ -30,4 +28,5 @@ const GatsbyColorLink = styled.a`
 const Column = styled.div`
   flex: 1 0 0%;
   padding: 0 3rem;
+  max-width: 600px;
 `;

@@ -81,6 +81,10 @@ const BackgroundWrapper = styled.div`
 const ButtonWrapper = styled.div`
   flex: 1;
   padding: 0 3rem;
+  min-height: 150px;
+  @media (max-width: 1024px) {
+    padding: 0;
+  }
 `;
 
 const Navigation = styled.div`
@@ -89,12 +93,22 @@ const Navigation = styled.div`
   z-index: 1;
   width: 100%;
   height: 150px;
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
 `;
 
 const ChildrenWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-around;
+  max-height: 300px;
+  word-break: break-all;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: scroll;
+  }
 `;
 
 const StyledButtonLink = styled(Link)`

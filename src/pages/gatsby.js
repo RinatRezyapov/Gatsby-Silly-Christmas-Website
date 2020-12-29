@@ -13,8 +13,6 @@ export default function Gatsby() {
         </p>
       <p> Check out Gatsby's official <GatsbyColorLink href='https://www.gatsbyjs.com/' target='_blank' rel="noreferrer">&nbsp;web site</GatsbyColorLink></p>
     </Column>
-    <Column />
-    <Column />
     <Column>
       <h1>
         Gatsby sites are fast by design
@@ -34,4 +32,5 @@ const GatsbyColorLink = styled.a`
 const Column = styled.div`
   flex: 1 0 0%;
   padding: 0 3rem;
+  max-width: 600px;
 `;

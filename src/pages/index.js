@@ -15,8 +15,6 @@ export default function Home() {
       <p>Long long time ago developers were using HTML Tables to create images in order to display them in email clients that do not support displaying images.
       This web site doesn't use images at all, all you see are HTML Tables with cells of different colors.</p>
     </Column>
-    <Column />
-    <Column />
     <Column>
       <h1>Right now the DOM contains <GatsbyColorText>{' '}{tdsCount}</GatsbyColorText> td elements</h1>
       <p>There could be even more. It all depends on how detailed you want your images when converting them to the HTML Table.</p>
@@ -32,4 +30,5 @@ const GatsbyColorText = styled.span`
 const Column = styled.div`
   flex: 1 0 0%;
   padding: 0 3rem;
+  max-width: 600px;
 `;
