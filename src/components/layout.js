@@ -115,11 +115,11 @@ const StyledButtonLink = styled(Link)`
   color: white; 
   text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
   text-decoration: none; 
-  padding: 1rem;
-  margin-left: 1rem;
+  margin: 16px auto;
   display: flex; 
   justify-content: center;
   align-items: center; 
   height: 100%;
+  width: 100px;
   text-align: center;
 `;
